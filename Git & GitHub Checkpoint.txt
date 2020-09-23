@@ -1,0 +1,124 @@
+
+
+
+
+jawhe@LAPTOP-35TS87HT MINGW64 ~/Desktop
+$ mkdir learn_git_again
+
+jawhe@LAPTOP-35TS87HT MINGW64 ~/Desktop
+$ cd learn_git_again
+
+jawhe@LAPTOP-35TS87HT MINGW64 ~/Desktop/learn_git_again
+$ touch third.txt
+
+jawhe@LAPTOP-35TS87HT MINGW64 ~/Desktop/learn_git_again
+$ git init
+Initialized empty Git repository in C:/Users/jawhe/Desktop/learn_git_again/.git/
+
+
+jawhe@LAPTOP-35TS87HT MINGW64 ~/Desktop/learn_git_again (master)
+$ git add third.txt
+
+jawhe@LAPTOP-35TS87HT MINGW64 ~/Desktop/learn_git_again (master)
+$ git commit -m "adding third.txt"
+[master (root-commit) 1be539e] adding third.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 third.txt
+
+jawhe@LAPTOP-35TS87HT MINGW64 ~/Desktop/learn_git_again (master)
+$ git log third.txt
+commit 1be539eeaf7ec45297cd75fd20a4888bf5f2e118 (HEAD -> master)
+Author: unknown <jawherhajri01@gmail.com>
+Date:   Wed Sep 23 02:29:15 2020 +0100
+
+    adding third.txt
+
+jawhe@LAPTOP-35TS87HT MINGW64 ~/Desktop/learn_git_again (master)
+$ git checkout
+
+jawhe@LAPTOP-35TS87HT MINGW64 ~/Desktop/learn_git_again (master)
+$ touch fourth.txt
+
+jawhe@LAPTOP-35TS87HT MINGW64 ~/Desktop/learn_git_again (master)
+$ git add fourth.txt
+
+jawhe@LAPTOP-35TS87HT MINGW64 ~/Desktop/learn_git_again (master)
+$ git commit -m "adding fourth.txt"
+[master 00d8c0f] adding fourth.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 fourth.txt
+
+jawhe@LAPTOP-35TS87HT MINGW64 ~/Desktop/learn_git_again (master)
+$ git rm third.txt
+rm 'third.txt'
+
+jawhe@LAPTOP-35TS87HT MINGW64 ~/Desktop/learn_git_again (master)
+$ git add -A
+
+jawhe@LAPTOP-35TS87HT MINGW64 ~/Desktop/learn_git_again (master)
+$ ls
+fourth.txt
+
+jawhe@LAPTOP-35TS87HT MINGW64 ~/Desktop/learn_git_again (master)
+$ git commit -m "removing third.txt"
+[master 1a1961e] removing third.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 third.txt
+
+jawhe@LAPTOP-35TS87HT MINGW64 ~/Desktop/learn_git_again (master)
+$ git log
+commit 1a1961e5ffb284d2ed51d4fbe8ccb24431ff15e3 (HEAD -> master)
+Author: unknown <jawherhajri01@gmail.com>
+Date:   Wed Sep 23 02:38:38 2020 +0100
+
+    removing third.txt
+
+commit 00d8c0f525f594988c36a35807b7dbc20d61ff80
+Author: unknown <jawherhajri01@gmail.com>
+Date:   Wed Sep 23 02:32:19 2020 +0100
+
+    adding fourth.txt
+
+commit 1be539eeaf7ec45297cd75fd20a4888bf5f2e118
+Author: unknown <jawherhajri01@gmail.com>
+Date:   Wed Sep 23 02:29:15 2020 +0100
+
+    adding third.txt
+
+jawhe@LAPTOP-35TS87HT MINGW64 ~/Desktop/learn_git_again (master)
+$ git config --global core.pager=cat
+error: invalid key: core.pager=cat
+
+jawhe@LAPTOP-35TS87HT MINGW64 ~/Desktop/learn_git_again (master)
+$ git config --global core.pager 'cat'
+
+jawhe@LAPTOP-35TS87HT MINGW64 ~/Desktop/learn_git_again (master)
+$ git config --global core.pager cat
+
+
+
+jawhe@LAPTOP-35TS87HT MINGW64 ~/Desktop/learn_git_again (master)
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+user.email=jawherhajri01@gmail.com
+core.pager=cat
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+
+jawhe@LAPTOP-35TS87HT MINGW64 ~/Desktop/learn_git_again (master)
+"You can type git config --global to find out how to do this??"
